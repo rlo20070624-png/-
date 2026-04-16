@@ -20,22 +20,34 @@
       font-weight: bold;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background: white;
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
-      flex-wrap: wrap;
-    }
+   nav {
+  background: white;
+  padding: 20px 0;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+  nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
 
+nav li a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav li a:hover {
+  color: orange !important;
+}
+
+nav li a:visited {
+  color: #222;
+}
     .hero {
       background: linear-gradient(135deg, #00b894, #55efc4);
       color: white;
