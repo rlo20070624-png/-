@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style born｜ゆいマップ</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: #fffaf5;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 900;
+      color: #2f7d7e;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      margin-left: 14px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #2f7d7e;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: 28px auto;
+      padding: 36px 22px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-text {
+      background: white;
+      padding: 32px;
+      border-radius: 28px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    }
+
+    .category {
+      display: inline-block;
+      background: #ffe8dd;
+      color: #2f7d7e;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 8px 0 12px;
+    }
+
+    .catch {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 22px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-main {
+      background: #2f7d7e;
+      color: white;
+    }
+
+    .btn-sub {
+      background: #fff1e8;
+      color: #2f7d7e;
+      border: 1px solid #f2d8cc;
+    }
+
+    .image-box {
+      min-height: 300px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #ffb48f, #ffe1b8, #bce9df);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+      color: white;
+      font-size: 80px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding: 0 22px;
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 24px;
+    }
+
+    section, aside {
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .point-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .point {
+      background: #fffaf5;
+      border: 1px solid #f1dfd5;
+      border-radius: 18px;
+      padding: 16px;
+      font-weight: bold;
+    }
+
+    .coupon {
+      background: linear-gradient(135deg, #fff0e7, #eafff8);
+      border: 2px dashed #8fcac3;
+      border-radius: 20px;
+      padding: 20px;
+      font-weight: bold;
+      color: #2f7d7e;
+    }
+
+    .info-row {
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      font-size: 12px;
+      color: #777;
+      font-weight: bold;
+    }
+
+    .info-value {
+      font-weight: bold;
+      margin-top: 2px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+      padding: 30px 20px;
+      border-top: 1px solid #eee;
+      background: white;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .point-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">ゆいマップ</a>
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="shops.html">店舗一覧</a>
+        <a href="map.html">地図で探す</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-text">
+      <span class="category">美容室 / 北谷町</span>
+      <h1>Style born</h1>
+      <p class="catch">
+        北谷町浜川にあるヘアサロン。カット・カラー・ヘアメイクなど、学生が美容室を探すときの候補として見やすくまとめています。
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-main" href="tel:0989262070">電話する</a>
+        <a class="btn btn-sub" href="https://www.google.com/maps/search/?api=1&query=Styleborn%20%E5%8C%97%E8%B0%B7%E7%94%BA%E6%B5%9C%E5%B7%9D124-2%20S-130" target="_blank">地図で見る</a>
+        <a class="btn btn-sub" href="https://styleborn.info/" target="_blank">公式サイト</a>
+      </div>
+    </div>
+
+    <div class="image-box">
+      ✂️
+    </div>
+  </div>
+
+  <main>
+    <div>
+      <section>
+        <h2>ゆいマップ的おすすめポイント</h2>
+        <p>
+          北谷町エリアで美容室を探している学生向けに、場所・電話・公式サイト・学生特典の確認状況をまとめたページです。
+        </p>
+
+        <div class="point-list">
+          <div class="point">📍 北谷町浜川エリア</div>
+          <div class="point">💇‍♀️ カット・カラー候補に</div>
+          <div class="point">🎓 学生特典は確認中</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>学生特典</h2>
+        <div class="coupon">
+          現在、学生向け特典を確認中です。
+        </div>
+        <p class="note">
+          例：学生証提示で〇〇円OFF、初回限定サービス、トリートメント特典など。店舗に確認できたらここを正式な内容に変更します。
+        </p>
+      </section>
+
+      <section>
+        <h2>メニュー例</h2>
+        <p>
+          カット、カラー、パーマ、ヘアメイクなど。料金は公式確認後に掲載予定です。
+        </p>
+      </section>
+    </div>
+
+    <aside>
+      <h2>店舗情報</h2>
+
+      <div class="info-row">
+        <div class="info-label">店舗名</div>
+        <div class="info-value">Style born</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">住所</div>
+        <div class="info-value">沖縄県中頭郡北谷町浜川124-2 S-130</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">電話番号</div>
+        <div class="info-value"><a href="tel:0989262070">098-926-2070</a></div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">営業時間</div>
+        <div class="info-value">9:00〜19:00</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">定休日</div>
+        <div class="info-value">日曜日 / 第1・第3月曜日</div>
+      </div>
+
+      <p class="note">
+        営業時間・定休日は変更される可能性があるため、来店前に電話や公式サイトで確認してください。
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    © ゆいマップ｜学生向け沖縄ローカル特典マップ
+  </footer>
+
+</body>
+</html>
